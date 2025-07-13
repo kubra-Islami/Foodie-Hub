@@ -29,7 +29,6 @@ exports.update = async (id, { name, address }) => {
         throw new Error('Error updating restaurant: ' + err.message);
     }
 };
-
 exports.remove = async (id) => {
     try {
         const result = await db.query('DELETE FROM restaurants WHERE id = $1 RETURNING *', [id]);

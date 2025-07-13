@@ -39,6 +39,8 @@
 --     menu_item_id INTEGER REFERENCES menu_items (id) ON DELETE SET NULL,
 --     quantity     INTEGER NOT NULL CHECK (quantity > 0)
 -- );
+
+
 CREATE TABLE restaurants(
     id         SERIAL NOT NULL PRIMARY KEY,
     name       VARCHAR(255),
