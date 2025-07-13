@@ -70,7 +70,9 @@ exports.updateOrderStatus = async (id, status) => {
     );
     return result.rows[0];
 };
+
 exports.deleteOrder = async (id) => {
     const result = await db.query('DELETE FROM orders WHERE id = $1 RETURNING *', [id]);
     return result.rows[0];
 };
+
